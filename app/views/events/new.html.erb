@@ -1,0 +1,24 @@
+<%=form_tag "/events", method: :post do %>
+<div>
+	
+	 <%= text_field_tag :venue, nil, placeholder: "Venue" %>
+
+
+</div>
+
+
+<div>
+	
+	 <%= text_field_tag :date, nil, placeholder: "Date" %>
+
+</div>
+
+<div>
+	
+	 <%= text_field_tag :time, nil, placeholder: "Time" %>
+
+</div>
+
+<%= submit_tag "Add Events" %>
+
+<%end%>

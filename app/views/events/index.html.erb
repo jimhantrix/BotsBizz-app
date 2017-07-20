@@ -1,0 +1,16 @@
+
+
+
+
+
+<% @events.each do |evnt| %>
+  <div>
+    <h3><%=evnt.venue %></h3>
+
+    <% if @current_user %>
+
+    <%= button_to "Join Event", event_users_path(event) %>
+    <%end%>
+  </div>
+  <br>
+<% end %>
