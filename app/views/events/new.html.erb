@@ -1,5 +1,10 @@
-<%=form_tag "/events", method: :post do %>
-<div>
+<h1> New Event</h1>
+
+
+<%=form_tag "/events", :class =>" form horizontal", method: :post do %>
+
+
+<div calss = "">
 	
 	 <%= text_field_tag :venue, nil, placeholder: "Venue" %>
 
@@ -15,7 +20,7 @@
 
 <div>
 	
-	 <%= text_field_tag :time, nil, placeholder: "Time" %>
+	 <%= text_field_tag :time, nil, placeholder: "Time line" %>
 
 </div>
 

@@ -1,0 +1,26 @@
+<p> Event: <%= @event.event%></p>
+	<p> Date: <%= @event.date%></p>
+  <p> Time:
+	<ul>
+	  <% @event.time_list.each do | tl | %>
+		<li><%=time%><li>
+	  <%end%>
+	<ul>
+
+  </p>
+
+  <a class="btn btn-default" href="/events/<%=@event.id%>/edit" role = "button"> Edit </a>
+<%= form_tag "/events/#{@event.id}", method: :delete do %>
+<input class ="btn btn-default" type="submit"
+value="Destroy">
+<%end%>
+
+
+
+
+
+
+
+
+
+

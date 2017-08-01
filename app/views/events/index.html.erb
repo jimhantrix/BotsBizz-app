@@ -1,11 +1,14 @@
+<div class = " Jumbotron text-center">
 
-
+<h1> Bots Buzz Events</h1>
 
 
 
 <% @events.each do |evnt| %>
   <div>
-    <h3><%=evnt.venue %></h3>
+    <h3> Venue: <%=evnt.venue %></h3>
+
+    
 
     <% if @current_user %>
 

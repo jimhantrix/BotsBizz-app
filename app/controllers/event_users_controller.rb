@@ -1,41 +1,24 @@
 class EventUsersController < ApplicationController
 
+	def index 
 
- def create 
+	 @user = User.find(params[:user_id])
+	 @events = @user.events
 
-
- 	@user = current_user
- 	
- 	@event = Event.find(params[:event_id])
-
- 	@user.events.push(@event)
-
- 	redirect_to user_events(@user)
-
- end 
+	end  
 
 
 
-
- def index 
-
- 	@events = Event.all 
- 	current_user
+	def create 
 
 
- end  
- def 
+	 @user = current_user
+	 	
+	 @event = Event.find(params[:event_id])
 
- 	@user = User.find(params[:user_id])
- 	@events = @user.events
+	 @user.events.push(@event)
 
- end 
+	 redirect_to user_events_path(@user)
 
-
-
-
-
-
-
-
+	end 
 end
